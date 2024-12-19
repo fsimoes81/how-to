@@ -48,6 +48,12 @@ Se estiver utilizando Minikube para descobrir o url do serviço NodePort use o s
 ```bash
 minikube service --url nome_do_servico --namespace=default
 ```
+ou
+
+```bash
+kubectl get nodes -o yaml | grep address
+```
+
 
 ```nginx
 server {
