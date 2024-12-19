@@ -43,6 +43,12 @@ sudo nano /etc/nginx/sites-available/kubernetes-proxy
 
 3. Nesse arquivo vamos adicionar a configuração do proxy reverso.
 
+Se estiver utilizando Minikube para descobrir o url do serviço NodePort use o seguinte comando:
+
+```bash
+minikube service --url nome_do_servico --namespace=default
+```
+
 ```nginx
 server {
     listen 80;
